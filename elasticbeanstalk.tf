@@ -1,5 +1,5 @@
-resource "aws_elastic_beanstalk_application" "devops-terraform-danit" {
-  name        = "terraform-danit"
+resource "aws_elastic_beanstalk_application" "devops-terraform-v35" {
+  name        = "terraform"
   description = "application version created by terraform"
 
   tags = {
@@ -7,10 +7,10 @@ resource "aws_elastic_beanstalk_application" "devops-terraform-danit" {
   }
 }
 
-resource "aws_elastic_beanstalk_environment" "devops-terraform-danit-env" {
-  name                = "terraform-danit"
-  application         = aws_elastic_beanstalk_application.devops-terraform-danit.name
-  solution_stack_name = "64bit Amazon Linux 2 v3.4.19 running Docker"
+resource "aws_elastic_beanstalk_environment" "devops-terraform-v35-env" {
+  name                = "terraform"
+  application         = aws_elastic_beanstalk_application.devops-terraform-v35.name
+  solution_stack_name = "64bit Amazon Linux 2 v3.5.0 running Docker"
   tier                = "WebServer"
 
   setting {
@@ -23,11 +23,5 @@ resource "aws_elastic_beanstalk_environment" "devops-terraform-danit-env" {
     name      = "InstanceType"
     value     = "t2.micro"
   }
-  #setting {
-  #  namespace = "aws:autoscaling:launchconfiguration"
-  #  name      = "InstanceType"
-  #  value     = "t2.micro"
-  #}
-
 }
 

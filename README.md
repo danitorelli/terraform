@@ -53,4 +53,4 @@ Após alguns minutos sua aplicação estará no ar, basta abrir seu painel da AW
 
 OBS: O repositório do código Hello World e do deploy está aqui:
 
-**_[Repositório Hello World](https://github.com/danitorelli/devops-elasticbeanstalk)_**
+**_[Repositório Hello World](http://terraform.eba-cy32hp8w.us-east-1.elasticbeanstalk.com/)_**
